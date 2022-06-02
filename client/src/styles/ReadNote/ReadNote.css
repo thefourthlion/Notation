@@ -1,0 +1,44 @@
+.ReadNote {
+  padding: 0 150px;
+  text-align: left;
+}
+
+.ReadNote h1 {
+  margin-top: 25px;
+}
+
+.ReadNote h4 {
+  margin: 25px 0;
+}
+
+.ReadNote .delete-btn {
+  margin-bottom: 25px;
+  width: 120px;
+  height: 30px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: #d21010 solid 2px;
+  color: #d21010;
+  border-radius: 3px;
+  cursor: pointer;
+  bottom: 7px;
+}
+
+.ReadNote .delete-btn:hover {
+  background-color: #d21010;
+  color: #01260E;
+  border-color: #01260E;
+}
+
+.ReadNote .delete-btn:focus {
+  background-color: #f70303;
+  color: #01260E;
+  border-color: #01260E;
+}
+
+@media only screen and (max-width: 500px) {
+  .ReadNote {
+    padding: 0 15px;
+  }
+}
+/*# sourceMappingURL=ReadNote.css.map */

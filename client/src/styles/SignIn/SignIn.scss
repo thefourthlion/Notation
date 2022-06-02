@@ -1,0 +1,15 @@
+
+.SignInPage{
+    input{
+        margin: 25px auto;
+    }
+    button{
+        display: block;
+        margin: 25px auto;
+    }
+    .login-error{
+        color: red;
+        font-size: 1.5rem;
+        
+    }
+}

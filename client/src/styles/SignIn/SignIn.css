@@ -1,0 +1,14 @@
+.SignInPage input {
+  margin: 25px auto;
+}
+
+.SignInPage button {
+  display: block;
+  margin: 25px auto;
+}
+
+.SignInPage .login-error {
+  color: red;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=SignIn.css.map */

@@ -1,0 +1,24 @@
+.CreateNote{
+    h1{
+        margin: 25px 0 25px 0;
+    }
+    label{
+        position: relative;
+        right: 130px;
+        font-size: 1.5rem;
+    }
+    input{
+        margin: 15px auto;
+    }
+    textarea{
+        width: 312px;
+        height: 200px;
+        border-radius: 3px;
+        padding-left: 10px;
+        padding-top: 10px;
+        border: #01260E solid 1px;
+    }
+
+
+
+}

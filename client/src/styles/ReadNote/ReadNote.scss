@@ -1,0 +1,82 @@
+.ReadNote{
+    padding: 0 150px;
+    text-align: left;
+    // width: 100vw;
+
+    // .note-content{
+    //     border: black solid 2px;
+
+    //     margin: 0 5px;
+    //     padding: 25px 25px;
+    // }
+
+    h1{
+        margin-top: 25px;
+    }
+
+    h4{
+        margin: 25px 0;
+    }
+
+    .delete-btn{
+        margin-bottom: 25px;
+        width: 120px;
+        height: 30px;
+        font-size: 1rem;
+        background-color: transparent;
+        border: #d21010 solid 2px;
+        color: #d21010;
+        border-radius: 3px;
+        cursor: pointer;
+        bottom: 7px;
+
+    }
+
+    .delete-btn:hover{
+        background-color: #d21010;
+        color:#01260E ;
+        border-color: #01260E;
+    }
+
+    .delete-btn:focus{
+        background-color: #f70303;
+        color:#01260E ;
+        border-color: #01260E;
+    }
+
+    //mobile 
+    @media only screen and (max-width: 500px) {
+        padding: 0 15px;
+    }
+
+
+    // .edit-btn{
+    //     margin-bottom: 25px;
+    //     width: 120px;
+    //     height: 30px;
+    //     font-size: 1rem;
+    //     background-color: transparent;
+    //     border: #e68620 solid 2px;
+    //     color: #e68620;
+    //     border-radius: 3px;
+    //     cursor: pointer;
+    //     position: relative; 
+    //     left: 100px;
+    //     bottom: 7px;
+
+    // }
+
+    // .edit-btn:hover{
+    //     background-color: #c6731a;
+    //     color:#01260E ;
+    //     border-color: #01260E;
+    // }
+
+    // .edit-btn:focus{
+    //     background-color: #ae6516;
+    //     color:#01260E ;
+    //     border-color: #01260E;
+    // }
+
+  
+}

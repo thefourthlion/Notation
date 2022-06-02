@@ -1,0 +1,55 @@
+*{
+    // @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');    
+    // @import 'bootstrap/dist/css/bootstrap.min.css';
+
+    margin: 0;
+    padding: 0;
+
+    body{
+        overflow-x: hidden;
+        text-align: center;
+        // font-family: 'Nunito Sans', sans-serif;    
+        background-color: #dddedd;
+        color: #01260E;
+    }
+    .green{
+        color: #62A632;
+    }
+    .submit-btn{
+        width: 312px;
+        height: 35px;
+        font-size: 1.25rem;
+        background-color: transparent;
+        border: #62A632 solid 2px;
+        color: #62A632;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .submit-btn:hover{
+        background-color: #62A632;
+        color:#01260E ;
+
+    }
+    .submit-btn:focus{
+        background-color: #3d9117;
+        color:#01260E ;
+    }
+    input{
+        display: block;
+        margin: 0 auto;
+        width: 312px;
+        height: 35px;
+        border-radius: 3px;
+        border: #01260E solid 1px;
+        padding-left: 10px;
+
+    }
+    label{
+        display: block;
+    }
+    textarea{
+        display: block;
+        margin: 15px auto;
+    }
+}
+

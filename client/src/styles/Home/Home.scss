@@ -1,0 +1,26 @@
+.Home{
+    h1{
+        margin: 100px 0 75px 0;
+        font-size: 2.5rem;
+    }
+    .get-started-btn{
+        background-color: #62A632;
+        color: white;
+        width: 200px;
+        height: 35px;
+        font-size: 1rem;
+        border: #62A632 solid 1px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .get-started-btn:hover{
+        background-color: #69bc2f;
+    }
+    .get-started-btn:focus{
+        background-color: #3d9117;
+    }
+    a{
+        text-decoration: none;
+        color:#01260E;
+    }
+}
