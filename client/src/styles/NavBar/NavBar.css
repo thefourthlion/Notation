@@ -74,6 +74,11 @@
   border-radius: 20%;
 }
 
+.NavBar .user-btn {
+  width: 100px !important;
+  height: 45px !important;
+}
+
 @media only screen and (max-width: 500px) {
   .NavBar a {
     font-size: 1.25rem;

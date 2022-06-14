@@ -2,7 +2,8 @@ import CreateNote from "./components/CreateNote";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import ReadNote from "./components/ReadNote";
-import SignInPage from "./components/SignInPage";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 import { UserContext } from "./contexts/UserContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useMemo, useEffect } from "react";
@@ -34,8 +35,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<CreateNote />} />
-          <Route path="/readNote" element={<ReadNote />} />
-          <Route path="/signIn" element={<SignInPage />} />
+          <Route path="/readNote/:id" element={<ReadNote />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
       </UserContext.Provider>
     </Router>

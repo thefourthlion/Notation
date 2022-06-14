@@ -1,37 +1,43 @@
+const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 const findOrCreate = require("mongoose-findorcreate");
 
-const mongoose = require("mongoose");
-
-const UserSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    required: false,
+const UserSchema = new mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      default: "",
+    },
+    lastName: {
+      type: String,
+      default: "",
+    },
+    username: {
+      type: String,
+      required: [true, "Please provide a username"],
+      unique: [true, "Username already taken"],
+    },
+    email: {
+      type: String,
+      required: [true, "Please provide an email address"],
+      unique: [true, "Email address already taken"],
+    },
+    password: {
+      type: String,
+      // required: [true, "Please provide a password"],
+    },
+    phoneNumber: {
+      type: String,
+      default: "",
+    },
+    profilePic: {
+      type: String,
+      default: "",
+    },
   },
-  lastName: {
-    type: String,
-    required: false,
-  },
-  username: {
-    type: String,
-    required: false,
-  },
-  email: {
-    type: String,
-    required: false,
-  },
-  password: {
-    type: String,
-    required: false,
-  },
-  phoneNumber: {
-    type: String,
-    required: false,
-  },
-});
+  { timestamps: true }
+);
 
 UserSchema.plugin(passportLocalMongoose);
 UserSchema.plugin(findOrCreate);
-const Users = mongoose.model("Users", UserSchema);
-
-module.exports = Users;
+module.exports = mongoose.model("User", UserSchema);

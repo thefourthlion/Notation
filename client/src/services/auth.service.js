@@ -10,7 +10,7 @@ const signup = (
   password
 ) => {
   return axios
-    .post("http://localhost:3001/register", {
+    .post("http://localhost:3001/api/auth/register", {
       firstName,
       lastName,
       username,
@@ -30,7 +30,7 @@ const signup = (
 // login a user
 const login = (username, password) => {
   return axios
-    .post("http://localhost:3001/login", {
+    .post("http://localhost:3001/api/auth/login", {
       username,
       password,
     })
@@ -50,7 +50,9 @@ const logout = () => {
 
 // get current user
 const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem("user"));
+  let user = JSON.parse(localStorage.getItem("user"));
+  // return user.id;
+  return user;
 };
 
 const authService = {

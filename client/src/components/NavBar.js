@@ -1,11 +1,43 @@
-import react, { useState } from "react";
+import react, { useState, useEffect } from "react";
+import AuthService from "../services/auth.service";
 import "../styles/NavBar/NavBar.css";
 
 export default function NavBar() {
   const [showLinks, setShowLinks] = useState(false);
 
-  // const authenticate = isAuthenticated ? <LogoutButton /> : <LoginButton />;
+  const [currentUser, setCurrentUser] = useState(undefined);
+  let noteLink = "";
+  useEffect(() => {
+    const user = AuthService.getCurrentUser();
 
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
+
+  const logOut = () => {
+    AuthService.logout();
+    window.location.reload();
+  };
+
+  const isUserSignedIn = currentUser ? (
+    <button type="button" className="user-btn submit-btn " onClick={logOut}>
+      Log Out
+    </button>
+  ) : (
+    <a href="http://localhost:3000/signin">
+      <button type="button" className="user-btn submit-btn sign-in">
+        Sign In
+      </button>
+    </a>
+  );
+  // const authenticate = isAuthenticated ? <LogoutButton /> : <LoginButton />;
+  if (currentUser) {
+    console.log(currentUser);
+    noteLink = "http://localhost:3000/readNote/" + currentUser._id;
+  } else {
+    noteLink = "http://localhost:3000/readNote";
+  }
   // https://notation-frontend.netlify.app/
   // http://localhost:3000
   return (
@@ -17,20 +49,12 @@ export default function NavBar() {
           </a>
         </li>
         <li>
-          <a href="http://localhost:3000/add">Add Note</a>
+          <a href="http://localhost:3000/add">Create Note</a>
         </li>
         <li>
-          <a href="http://localhost:3000/readNote">View Notes</a>
+          <a href={noteLink}>Read Notes</a>
         </li>
-        <li>
-          <a href="http://localhost:3000/signin">Sign In</a>
-        </li>
-        {/* <li className="nav-links">
-          <a href="">
-            <LoginButton />
-          </a>
-        </li> */}
-        {/* {authenticate} */}
+        <li>{isUserSignedIn}</li>
       </ul>
       <h1 className="nav-title bold-header">
         <span className="green">Notation</span>

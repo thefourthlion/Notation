@@ -4,30 +4,41 @@ import Col from "react-bootstrap/Col";
 import React, { useState, useEffect, useContext } from "react";
 import Axios from "axios";
 import "../styles/ReadNote/ReadNote.css";
+import AuthService from "../services/auth.service";
+import { useParams } from "react-router-dom";
+
 import { UserContext } from "../contexts/UserContext";
 export default function ReadNote() {
   // https://notation-backend.herokuapp.com/
   // http://localhost:3001
   const [noteList, setNoteList] = useState([]);
-  // const [currentUser, setCurrentUser] = useContext(UserContext);
+  const [currentUser, setCurrentUser] = useState(undefined);
+  const { id } = useParams();
+  useEffect(() => {
+    const user = AuthService.getCurrentUser();
 
-  // const logUser = () => {
-  //   console.log(currentUser);
-  // };
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/readNote").then((res) => {
-      setNoteList(res.data);
-    });
+    if (currentUser) {
+      Axios.get(`http://localhost:3001/api/posts/read/${id}`).then((res) => {
+        const data = res.data;
+        setNoteList(data);
+      });
+    }
   }, []);
 
   const deleteNote = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`, {});
+    Axios.delete(`http://localhost:3001/api/posts/delete/${id}`, {});
     setTimeout(() => {
-      // window.location.reload();
+      window.location.reload();
     }, 1000);
   };
 
+  // const userName = currentUser.username;
   return (
     <div>
       <div className="ReadNote">
@@ -39,8 +50,9 @@ export default function ReadNote() {
                   <Col>
                     <p className="date"></p>
                     <h1 className={val.key}>
-                      <span className="green">{val.title}</span> - {val.date}
+                      <span className="green">{val.title}</span>
                     </h1>
+                    <h2>-{val.username}</h2>
                     <h4>{val.description}</h4>
                     <button
                       className="delete-btn"
@@ -53,9 +65,6 @@ export default function ReadNote() {
                   </Col>
                 </Row>
               </Container>
-              {/* <button className="delete-btn" onClick={logUser}>
-                Log
-              </button> */}
             </div>
           );
         })}

@@ -7,11 +7,11 @@
   overflow-x: hidden;
   text-align: center;
   background-color: #dddedd;
-  color: #01260E;
+  color: #01260e;
 }
 
 * .green {
-  color: #62A632;
+  color: #62a632;
 }
 
 * .submit-btn {
@@ -19,20 +19,20 @@
   height: 35px;
   font-size: 1.25rem;
   background-color: transparent;
-  border: #62A632 solid 2px;
-  color: #62A632;
+  border: #62a632 solid 2px;
+  color: #62a632;
   border-radius: 3px;
   cursor: pointer;
 }
 
 * .submit-btn:hover {
-  background-color: #62A632;
-  color: #01260E;
+  background-color: #62a632;
+  color: #01260e;
 }
 
 * .submit-btn:focus {
   background-color: #3d9117;
-  color: #01260E;
+  color: #01260e;
 }
 
 * input {
@@ -41,8 +41,13 @@
   width: 312px;
   height: 35px;
   border-radius: 3px;
-  border: #01260E solid 1px;
+  border: #01260e solid 1px;
   padding-left: 10px;
+}
+
+* .form-input {
+  margin: 10px auto;
+  max-width: 312px;
 }
 
 * label {
@@ -52,5 +57,31 @@
 * textarea {
   display: block;
   margin: 15px auto;
+}
+
+* .red {
+  color: red;
+}
+
+* textarea:focus,
+* input[type="text"]:focus,
+* input[type="password"]:focus,
+* input[type="datetime"]:focus,
+* input[type="datetime-local"]:focus,
+* input[type="date"]:focus,
+* input[type="month"]:focus,
+* input[type="time"]:focus,
+* input[type="week"]:focus,
+* input[type="number"]:focus,
+* input[type="email"]:focus,
+* input[type="url"]:focus,
+* input[type="search"]:focus,
+* input[type="tel"]:focus,
+* input[type="color"]:focus,
+* .uneditable-input:focus {
+  border-color: #01260e;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0 none;
 }
 /*# sourceMappingURL=Main.css.map */

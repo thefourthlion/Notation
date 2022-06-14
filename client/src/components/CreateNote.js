@@ -1,19 +1,35 @@
 import React, { useState, useEffect, useContext } from "react";
 import Axios from "axios";
+import AuthService from "../services/auth.service";
+
 import "../styles/CreateNote/CreateNote.css";
 export default function CreateNote() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   let today = new Date();
+  const [currentUser, setCurrentUser] = useState(undefined);
+
+  useEffect(() => {
+    const user = AuthService.getCurrentUser();
+
+    if (user) {
+      setCurrentUser(user);
+    }
+  }, []);
+
   // https://notation-backend.herokuapp.com/
   // http://localhost:3001
   const addNote = () => {
-    Axios.post("http://localhost:3001/addNote", {
-      date: date,
-      title: title,
-      description: description,
-    });
+    if (currentUser) {
+      Axios.post("http://localhost:3001/api/posts/post", {
+        username: currentUser.username,
+        userID: currentUser.id,
+        date: date,
+        title: title,
+        description: description,
+      });
+    }
   };
 
   return (
@@ -49,7 +65,7 @@ export default function CreateNote() {
               setDescription(e.target.value);
             }}
           />
-          <button className="submit-btn" onClick={addNote}>
+          <button type="button" className="submit-btn" onClick={addNote}>
             Submit
           </button>
         </form>
