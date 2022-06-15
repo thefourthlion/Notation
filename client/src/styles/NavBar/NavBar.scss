@@ -20,27 +20,6 @@
         color: #62A632;
     }
     
-    .sign-in-btn{
-        width: 125px;
-        height: 35px;
-        margin-left: 10px;
-        font-size: 1.25rem;
-        background-color: transparent;
-        border: #62A632 solid 2px;
-        color: #62A632;
-        border-radius: 3px;
-
-        cursor: pointer;
-    }
-    .sign-in-btn:hover{
-        background-color: #62A632;
-        color:#01260E ;
-
-    }
-    .sign-in-btn:focus{
-        background-color: #3d9117;
-        color:#01260E ;
-    }
     
     .title{
         font-weight: bold;
@@ -63,11 +42,9 @@
         border-radius: 20%;
     }
     .user-btn{
-        width: 100px !important;
-        height: 45px !important;
+        width: 100px ;
     }
     
-
     @media only screen and (max-width: 500px) {
         a{
             font-size: 1.25rem;

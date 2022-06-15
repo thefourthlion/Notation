@@ -1,29 +1,8 @@
 .Home h1 {
-  margin: 100px 0 75px 0;
+  margin: 100px 0 0 0;
   font-size: 2.5rem;
 }
-
-.Home .get-started-btn {
-  background-color: #62A632;
-  color: white;
-  width: 200px;
-  height: 35px;
-  font-size: 1rem;
-  border: #62A632 solid 1px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.Home .get-started-btn:hover {
-  background-color: #69bc2f;
-}
-
-.Home .get-started-btn:focus {
-  background-color: #3d9117;
-}
-
 .Home a {
   text-decoration: none;
   color: #01260E;
-}
-/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Home.css.map */

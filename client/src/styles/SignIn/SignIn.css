@@ -2,13 +2,6 @@
   display: block;
   margin: 25px auto;
 }
-
-.SignInPage .login-error {
-  color: red;
-  font-size: 1.5rem;
-}
-
 .SignInPage .link {
   color: #62a632;
-}
-/*# sourceMappingURL=SignIn.css.map */
+}/*# sourceMappingURL=SignIn.css.map */

@@ -97,7 +97,7 @@ export default function SignUp() {
           (response) => {
             // check for token and user already exists with 200
             console.log("Signed up successfully", response);
-            // window.location.reload();
+            window.location.reload();
           },
           (error) => {
             console.log(error);
@@ -199,7 +199,11 @@ export default function SignUp() {
             Sign In
           </a>
         </p>
-        <button type="button" className="submit-btn" onClick={handleSignup}>
+        <button
+          type="button"
+          className="green-outline-btn"
+          onClick={handleSignup}
+        >
           Create Account
         </button>
         <button type="button" className="delete-btn" onClick={loguser}>

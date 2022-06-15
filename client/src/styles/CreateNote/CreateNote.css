@@ -1,17 +1,14 @@
-.CreateNote h1 {
+.CreateNote .create-note-title {
   margin: 25px 0 25px 0;
 }
-
 .CreateNote label {
   position: relative;
   right: 130px;
   font-size: 1.5rem;
 }
-
 .CreateNote input {
   margin: 15px auto;
 }
-
 .CreateNote textarea {
   width: 312px;
   height: 200px;
@@ -19,5 +16,4 @@
   padding-left: 10px;
   padding-top: 10px;
   border: #01260E solid 1px;
-}
-/*# sourceMappingURL=CreateNote.css.map */
+}/*# sourceMappingURL=CreateNote.css.map */

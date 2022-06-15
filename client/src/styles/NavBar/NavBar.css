@@ -2,70 +2,34 @@
   z-index: 1;
   margin: 7px 0 10px 0;
 }
-
 .NavBar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   list-style: none;
 }
-
 .NavBar li {
   margin: 20px;
 }
-
 .NavBar a {
   text-decoration: none;
   font-size: 2.5rem;
   color: #01260E;
 }
-
 .NavBar a:hover {
   color: #62A632;
 }
-
-.NavBar .sign-in-btn {
-  width: 125px;
-  height: 35px;
-  margin-left: 10px;
-  font-size: 1.25rem;
-  background-color: transparent;
-  border: #62A632 solid 2px;
-  color: #62A632;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.NavBar .sign-in-btn:hover {
-  background-color: #62A632;
-  color: #01260E;
-}
-
-.NavBar .sign-in-btn:focus {
-  background-color: #3d9117;
-  color: #01260E;
-}
-
 .NavBar .title {
   font-weight: bold;
 }
-
 .NavBar .burger {
   display: none;
   cursor: pointer;
 }
-
 .NavBar .nav-title {
   display: none;
   font-weight: bold;
 }
-
 .NavBar .burger div {
   width: 25px;
   height: 3px;
@@ -73,12 +37,9 @@
   margin: 5px;
   border-radius: 20%;
 }
-
 .NavBar .user-btn {
-  width: 100px !important;
-  height: 45px !important;
+  width: 100px;
 }
-
 @media only screen and (max-width: 500px) {
   .NavBar a {
     font-size: 1.25rem;
@@ -104,20 +65,10 @@
     right: 0;
     height: 100vh;
     top: 105px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
     padding: 0 10%;
     background-color: #dddedd;
   }
@@ -127,12 +78,10 @@
     font-size: 2rem;
   }
   .NavBar #nav-hidden {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
   .NavBar #nav-active {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   .NavBar .burger {
     display: block;
@@ -140,5 +89,4 @@
     top: 15px;
     right: 15px;
   }
-}
-/*# sourceMappingURL=NavBar.css.map */
+}/*# sourceMappingURL=NavBar.css.map */

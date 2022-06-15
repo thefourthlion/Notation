@@ -37,7 +37,7 @@ exports.readPosts = async (req, res) => {
 
 exports.readPostFromUser = async (req, res) => {
   try {
-    await Posts.find({ userID: req.params.id }, {}, (err, result) => {
+    await Posts.find({ username: req.params.id }, {}, (err, result) => {
       if (err) {
         res.json({ app: err });
       }

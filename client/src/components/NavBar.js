@@ -21,20 +21,23 @@ export default function NavBar() {
   };
 
   const isUserSignedIn = currentUser ? (
-    <button type="button" className="user-btn submit-btn " onClick={logOut}>
+    <button
+      type="button"
+      className="user-btn green-outline-btn "
+      onClick={logOut}
+    >
       Log Out
     </button>
   ) : (
     <a href="http://localhost:3000/signin">
-      <button type="button" className="user-btn submit-btn sign-in">
+      <button type="button" className="user-btn green-outline-btn sign-in">
         Sign In
       </button>
     </a>
   );
-  // const authenticate = isAuthenticated ? <LogoutButton /> : <LoginButton />;
   if (currentUser) {
     console.log(currentUser);
-    noteLink = "http://localhost:3000/readNote/" + currentUser._id;
+    noteLink = "http://localhost:3000/readNote/" + currentUser.username;
   } else {
     noteLink = "http://localhost:3000/readNote";
   }

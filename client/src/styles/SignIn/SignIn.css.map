@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAII,WAJO,CAIP,MAAM,CAAA;EACF,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,SAAS;CACpB;;AAPL,AAQI,WARO,CAQP,YAAY,CAAA;EACR,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,MAAM;CAEpB;;AAZL,AAaA,WAbW,CAaX,KAAK,CAAA;EACD,KAAK,EAAE,OAAO;CACjB",
-    "sources": [
-        "SignIn.scss"
-    ],
-    "names": [],
-    "file": "SignIn.css"
-}
+{"version":3,"sources":["SignIn.scss","SignIn.css"],"names":[],"mappings":"AAEI;EACI,cAAA;EACA,iBAAA;ACDR;ADIA;EACI,cAAA;ACFJ","file":"SignIn.css"}

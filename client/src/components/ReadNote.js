@@ -23,13 +23,22 @@ export default function ReadNote() {
   }, []);
 
   useEffect(() => {
-    if (currentUser) {
-      Axios.get(`http://localhost:3001/api/posts/read/${id}`).then((res) => {
-        const data = res.data;
-        setNoteList(data);
-      });
-    }
+    readUsersNotes();
   }, []);
+
+  function loguser() {
+    alert(
+      "Your signed in as " + currentUser.username + " and your id is " + id
+    );
+  }
+
+  const readUsersNotes = () => {
+    Axios.get(`http://localhost:3001/api/posts/read/${id}`).then((res) => {
+      const data = res.data;
+      setNoteList(data);
+      console.log(data);
+    });
+  };
 
   const deleteNote = (id) => {
     Axios.delete(`http://localhost:3001/api/posts/delete/${id}`, {});
@@ -42,6 +51,9 @@ export default function ReadNote() {
   return (
     <div>
       <div className="ReadNote">
+        {/* <button type="button" className="delete-btn" onClick={loguser}>
+          Log
+        </button> */}
         {noteList.map((val, key) => {
           return (
             <div className="note-content" id={key}>

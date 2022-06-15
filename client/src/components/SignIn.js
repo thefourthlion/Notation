@@ -86,7 +86,11 @@ export default function SignIn() {
             Sign Up
           </a>
         </p>
-        <button type="button" className="submit-btn" onClick={handleLogin}>
+        <button
+          type="button"
+          className="green-outline-btn"
+          onClick={handleLogin}
+        >
           Sign In
         </button>
         <button type="button" className="delete-btn" onClick={loguser}>

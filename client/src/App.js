@@ -35,6 +35,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<CreateNote />} />
+          <Route path="/readNote/" element={<ReadNote />} />
           <Route path="/readNote/:id" element={<ReadNote />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />

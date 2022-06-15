@@ -11,7 +11,7 @@ export default function Home() {
           simplify life.
         </h1>
         <a href="http://localhost:3000/add">
-          <button className="get-started-btn">Get Started</button>
+          <button className="solid-green-btn">Get Started</button>
         </a>
       </div>
     </div>

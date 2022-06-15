@@ -32,9 +32,9 @@ export default function CreateNote() {
     }
   };
 
-  return (
-    <div className="CreateNote">
-      <h1>
+  const isUserSignedIn = currentUser ? (
+    <div>
+      <h1 className="create-note-title">
         What's on your <span className="green">mind</span> today?
       </h1>
       <div className="form-container">
@@ -65,11 +65,22 @@ export default function CreateNote() {
               setDescription(e.target.value);
             }}
           />
-          <button type="button" className="submit-btn" onClick={addNote}>
+          <button type="submit" className="green-outline-btn" onClick={addNote}>
             Submit
           </button>
         </form>
       </div>
     </div>
+  ) : (
+    <div className="user-not-signed-in">
+      <h1>In order to create notes you must be signed in.</h1>
+      <a href="http://localhost:3000/signin">
+        <button type="button" className="solid-green-btn">
+          Sign In
+        </button>
+      </a>
+    </div>
   );
+
+  return <div className="CreateNote">{isUserSignedIn}</div>;
 }
