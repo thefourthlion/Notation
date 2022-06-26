@@ -52,9 +52,6 @@ export default function SignIn() {
     }
   };
 
-  function loguser() {
-    alert("Your signed in as " + currentUser.username);
-  }
   // ------------------------------------------ (end of functions)--------------------------------------
 
   return (
@@ -92,9 +89,6 @@ export default function SignIn() {
           onClick={handleLogin}
         >
           Sign In
-        </button>
-        <button type="button" className="delete-btn" onClick={loguser}>
-          Log
         </button>
       </form>
     </div>

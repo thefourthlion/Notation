@@ -10,6 +10,10 @@ const PostSchema = new mongoose.Schema(
       type: String,
       require: [true, "Please provide userID"],
     },
+    date: {
+      type: String,
+      require: [true, "Please provide date"],
+    },
     title: {
       type: String,
       required: [true, "Please provide title"],

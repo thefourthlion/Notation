@@ -6,6 +6,7 @@ exports.createPost = async (req, res) => {
     let note = new Posts({
       username: req.body.username,
       userID: req.body.userID,
+      date: req.body.date,
       imageLink: req.body.imageLink,
       videoLink: req.body.videoLink,
       title: req.body.title,

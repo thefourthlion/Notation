@@ -11,6 +11,9 @@
 .NavBar li {
   margin: 20px;
 }
+.NavBar a button {
+  font-size: 1.25rem !important;
+}
 .NavBar a {
   text-decoration: none;
   font-size: 2.5rem;

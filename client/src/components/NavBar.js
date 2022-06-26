@@ -21,13 +21,15 @@ export default function NavBar() {
   };
 
   const isUserSignedIn = currentUser ? (
-    <button
-      type="button"
-      className="user-btn green-outline-btn "
-      onClick={logOut}
-    >
-      Log Out
-    </button>
+    <a className="logout-a" href="http://localhost:3000/signin">
+      <button
+        type="button"
+        className="user-btn green-outline-btn"
+        onClick={logOut}
+      >
+        Log Out
+      </button>
+    </a>
   ) : (
     <a href="http://localhost:3000/signin">
       <button type="button" className="user-btn green-outline-btn sign-in">

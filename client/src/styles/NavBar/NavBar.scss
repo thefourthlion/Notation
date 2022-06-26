@@ -11,6 +11,10 @@
         margin: 20px;
     }
 
+    a button{
+        font-size: 1.25rem !important;
+    }
+
     a{
         text-decoration: none;
         font-size: 2.5rem;
@@ -86,6 +90,7 @@
             font-size: 2rem;
         // font-weight: bold;
         }
+        
         #nav-hidden {
         transform: translateX(100%);
         }

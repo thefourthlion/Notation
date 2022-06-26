@@ -60,12 +60,13 @@ export default function ReadNote() {
               <Container>
                 <Row>
                   <Col>
-                    <p className="date"></p>
                     <h1 className={val.key}>
                       <span className="green">{val.title}</span>
+                      <span> - {val.date}</span>
                     </h1>
-                    <h2>-{val.username}</h2>
+
                     <h4>{val.description}</h4>
+                    <h2>-{val.username}</h2>
                     <button
                       className="delete-btn"
                       onClick={() => {
