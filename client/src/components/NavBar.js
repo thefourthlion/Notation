@@ -21,7 +21,7 @@ export default function NavBar() {
   };
 
   const isUserSignedIn = currentUser ? (
-    <a className="logout-a" href="http://localhost:3000/signin">
+    <a className="logout-a" href="https://notation-frontend.netlify.app/signin">
       <button
         type="button"
         className="user-btn green-outline-btn"
@@ -31,7 +31,7 @@ export default function NavBar() {
       </button>
     </a>
   ) : (
-    <a href="http://localhost:3000/signin">
+    <a href="https://notation-frontend.netlify.app/signin">
       <button type="button" className="user-btn green-outline-btn sign-in">
         Sign In
       </button>
@@ -39,9 +39,10 @@ export default function NavBar() {
   );
   if (currentUser) {
     console.log(currentUser);
-    noteLink = "http://localhost:3000/readNote/" + currentUser.username;
+    noteLink =
+      "https://notation-frontend.netlify.app/readNote/" + currentUser.username;
   } else {
-    noteLink = "http://localhost:3000/readNote";
+    noteLink = "https://notation-frontend.netlify.app/readNote";
   }
   // https://notation-frontend.netlify.app/
   // http://localhost:3000
@@ -49,12 +50,12 @@ export default function NavBar() {
     <div className="NavBar">
       <ul className="nav-links" id={showLinks ? "nav-active" : "nav-hidden"}>
         <li className="title">
-          <a href="http://localhost:3000">
+          <a href="https://notation-frontend.netlify.app">
             <span className="green">Notation</span>
           </a>
         </li>
         <li>
-          <a href="http://localhost:3000/add">Create Note</a>
+          <a href="https://notation-frontend.netlify.app/add">Create Note</a>
         </li>
         <li>
           <a href={noteLink}>Read Notes</a>

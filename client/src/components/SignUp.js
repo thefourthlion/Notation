@@ -195,7 +195,10 @@ export default function SignUp() {
         <h4 className="red">{userValidation}</h4>
         <p>
           Have an account already{" "}
-          <a className="link" href="http://localhost:3000/signin">
+          <a
+            className="link"
+            href="https://notation-frontend.netlify.app/signin"
+          >
             Sign In
           </a>
         </p>

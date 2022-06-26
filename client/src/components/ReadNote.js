@@ -33,15 +33,17 @@ export default function ReadNote() {
   }
 
   const readUsersNotes = () => {
-    Axios.get(`http://localhost:3001/api/posts/read/${id}`).then((res) => {
-      const data = res.data;
-      setNoteList(data);
-      console.log(data);
-    });
+    Axios.get(`https://notation.herokuapp.com/api/posts/read/${id}`).then(
+      (res) => {
+        const data = res.data;
+        setNoteList(data);
+        console.log(data);
+      }
+    );
   };
 
   const deleteNote = (id) => {
-    Axios.delete(`http://localhost:3001/api/posts/delete/${id}`, {});
+    Axios.delete(`https://notation.herokuapp.com/api/posts/delete/${id}`, {});
     setTimeout(() => {
       window.location.reload();
     }, 1000);

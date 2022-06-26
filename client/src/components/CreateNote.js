@@ -22,7 +22,7 @@ export default function CreateNote() {
   // http://localhost:3001
   const addNote = () => {
     if (currentUser) {
-      Axios.post("http://localhost:3001/api/posts/post", {
+      Axios.post("https://notation.herokuapp.com/api/posts/post", {
         username: currentUser.username,
         userID: currentUser.id,
         date: date,
@@ -74,7 +74,7 @@ export default function CreateNote() {
   ) : (
     <div className="user-not-signed-in">
       <h1>In order to create notes you must be signed in.</h1>
-      <a href="http://localhost:3000/signin">
+      <a href="https://notation-frontend.netlify.app/signin">
         <button type="button" className="solid-green-btn">
           Sign In
         </button>

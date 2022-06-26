@@ -10,7 +10,7 @@ const signup = (
   password
 ) => {
   return axios
-    .post("http://localhost:3001/api/auth/register", {
+    .post("https://notation.herokuapp.com/api/auth/register", {
       firstName,
       lastName,
       username,
@@ -30,7 +30,7 @@ const signup = (
 // login a user
 const login = (username, password) => {
   return axios
-    .post("http://localhost:3001/api/auth/login", {
+    .post("https://notation.herokuapp.com/api/auth/login", {
       username,
       password,
     })

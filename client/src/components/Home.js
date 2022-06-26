@@ -10,7 +10,7 @@ export default function Home() {
           Welcome to <span className="green">Notation</span>, notes that
           simplify life.
         </h1>
-        <a href="http://localhost:3000/add">
+        <a href="https://notation-frontend.netlify.app/add">
           <button className="solid-green-btn">Get Started</button>
         </a>
       </div>
