@@ -1,0 +1,12 @@
+services:
+  notation-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: notation-server
+    ports:
+      - "4018:4018"
+    environment:
+      - PORT=4018
+    volumes:
+      - ./:/notation-server
