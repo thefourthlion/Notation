@@ -2,7 +2,7 @@ services:
   notation-server:
     build:
       context: .
-      dockerfile: Dockerfile.client
+      dockerfile: Dockerfile
     container_name: notation-server
     ports:
       - "4018:4018"
